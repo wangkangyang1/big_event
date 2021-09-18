@@ -16,7 +16,6 @@ $(function() {
         // 优化 complete 代码 
         // 防止页面执行登录到首页 
         options.complete = function(res) {
-            console.log(res);
             // responseJSON  status    "身份认证失败！"  
             if (res.responseJSON.status === 1 && res.responseJSON.message === "身份认证失败！") {
                 location.href = './login.html'

@@ -21,12 +21,12 @@ function getInfo() {
         method: 'GET',
         url: '/my/userinfo',
         success: function(res) {
-            console.log(res);
             // 获取用户名和头像 
             if (res.status !== 0) {
                 return layer.msg(res.message);
             }
             renderAvatar(res.data)
+            console.log(res.data);
         }
 
 
@@ -42,7 +42,7 @@ function renderAvatar(user) {
 
     if (user.user_pic !== null) {
         //   设置用户图片 
-        $('.layui-nav-img').css('src', user.user_pic).show()
+        $('.layui-nav-img').attr('src', user.user_pic).show()
         $('.userimg').hide()
     } else {
         // 设置文本头像 
