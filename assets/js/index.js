@@ -26,7 +26,6 @@ function getInfo() {
                 return layer.msg(res.message);
             }
             renderAvatar(res.data)
-            console.log(res.data);
         }
 
 
